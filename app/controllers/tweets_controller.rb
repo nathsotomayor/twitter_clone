@@ -1,10 +1,9 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: %i[ show edit update destroy ]
-  #before_action :authenticate_user!
-
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.all.order("created_at DESC")
     @tweet = Tweet.new
   end
 
@@ -12,19 +11,19 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = Tweet.new
+    @tweet = current_user.tweets.build
   end
 
   def edit
   end
 
   def create
-    @tweet = Tweet.new(tweet_params)
+    @tweet = current_user.tweets.build(tweet_params)
 
     respond_to do |format|
       if @tweet.save
-        format.html { redirect_to @tweet, notice: "Tweet was successfully created." }
-        format.json { render :show, status: :created, location: @tweet }
+        format.html { redirect_to tweets_path(@tweet), notice: "Tweet was successfully created." }
+        format.json { render :show, status: :created, location: tweets_path(@tweet) }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @tweet.errors, status: :unprocessable_entity }
