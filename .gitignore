@@ -27,6 +27,8 @@
 *.gem
 *.rbc
 *.sassc
+.vscode
+/.vscode
 .rspec
 .redcar/
 .config
