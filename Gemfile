@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 # Will paginate Gem
 gem 'will_paginate'
+# Gravatar Gem
+gem 'gravatar_image_tag'
 
 
 gem 'ffi', '~> 1.12.2'
