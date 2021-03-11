@@ -6,6 +6,8 @@
 
 # Ignore bundler config.
 /.bundle
+/vendor/bundle/
+/vendor/ruby/
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -16,6 +18,87 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+.powder
+.virb*
+*.*~
+
+# various artifacts
+**.war
+*.gem
+*.rbc
+*.sassc
+.rspec
+.redcar/
+.config
+.sass-cache
+/public/cache
+/public/stylesheets/compiled
+/public/system/*
+/public/assets/*
+/public/sitemaps
+/spec/tmp/*
+/cache
+/capybara*
+/capybara-*.html
+/gems
+/specifications
+rerun.txt
+pickle-email-*.html
+.zeus.sock
+/solr/
+/.gemtags
+/coverage
+/coverage.data
+/InstalledFiles
+/pkg/
+/spec/reports/
+/test/tmp/
+/test/version_tmp/
+
+# scm revert files
+**.orig
+
+# Configuration files
+config/app_config.yml
+config/database.yml
+config/application.yml
+config/mandrill.yml
+config/paperclip.yml
+
+# Dev Machines
+.DS_Store
+*/.DS_Store
+
+Procfile.dev
+.env
+.env.development
+.env.test
+.env.staging
+.env.production
+
+# Application specific
+*.txt
+/doc
+/public/uploads
+
+# Documentation cache and generated files:
+/.yardoc/
+/_yardoc/
+/rdoc/
+
+# Environment normalisation:
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+# Folder config file
+Desktop.ini
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+
+.DS_store
+config/database.yml
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
