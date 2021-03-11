@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # Devise Gem
 gem 'devise'
+# Will paginate Gem
+gem 'will_paginate'
 
 
 gem 'ffi', '~> 1.12.2'

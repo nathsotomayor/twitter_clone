@@ -6,8 +6,9 @@
       <div class="card">
         <div class="card-body">
           <p class="card-text">
-            <strong><%= tweet.user.name %></strong><br/>
-            <small><%= tweet.user.username %></small><br/>
+            <strong><%= tweet.user.name %></strong>, 
+            <small>@<%= tweet.user.username %></small> ·
+            <small><%= tweet.created_at.getlocal.strftime("%d %b. %Y %I:%M %P") %></small><br/>
             <p><%= tweet.tweet %></p>
           </p>
           <% if user_signed_in? && current_user.id == tweet.user_id %>
@@ -25,6 +26,5 @@
         </div>
       </div>
     <% end %>
-
   </div>
 </div>
