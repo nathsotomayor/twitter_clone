@@ -5,7 +5,9 @@
     </div>
     <div class="col-6">
       <%= render partial: "feed" %><br/>
-      <div class="pagination justify-content-center"><%= will_paginate @tweets %></div>
+      <div class="pagination justify-content-center">
+        <%= will_paginate @tweets %>
+      </div>
     </div>
     <div class="col-3">
       Who to follow
