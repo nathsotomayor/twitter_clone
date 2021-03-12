@@ -1,10 +1,11 @@
 <div class="card">
   <img src="https://picsum.photos/500/150" class="card-img-top img-fluid" alt="lorem picsum">
   <div class="card-body">
-    <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
-    <h5 class="card-title"><%= current_user.name %></h5>
-    <small class="text-muted">@<%= current_user.username %></small>
+    <%= gravatar_image_tag(user.email, size: 64, alt: user.name) %>
+    <h5 class="card-title"><%= user.name %></h5>
+    <small class="text-muted">@<%= user.username %></small>
     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    <small class="card-text text-muted"><%= current_user.tweets.count %> Tweets <%= current_user.following.count %> Following <%= current_user.followers.count %> Followers</small>
+    <small class="card-text text-muted"><%= user.tweets.count %> Tweets  <%= user.following.count %> Following  <%= user.followers.count %> Followers</small>
+    <%= link_to 'Followers', followers_user_path(user), class: "btn btn-outline-info btn-sm" %>
   </div>
 </div>

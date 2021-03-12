@@ -28,6 +28,9 @@ gem 'will_paginate'
 # Gravatar Gem
 gem 'gravatar_image_tag'
 
+# Friendly id Gem
+gem 'friendly_id'
+
 
 gem 'ffi', '~> 1.12.2'
 

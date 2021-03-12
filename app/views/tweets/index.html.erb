@@ -4,7 +4,7 @@
       <%= render partial: "shared/navbar_lateral" %>
     </div>
     <div class="col-7">
-      <%= render partial: "profile" %>
+      <%= render partial: "profile", locals: {user: @user} %>
       <%= render partial: "feed" %><br/>
       <div class="pagination justify-content-center">
         <%= will_paginate @tweets %>

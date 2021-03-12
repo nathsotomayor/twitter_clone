@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   resources :tweets
   resources :relationships
-
   root 'home#index'
 
 end
