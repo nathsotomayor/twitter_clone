@@ -1,1 +1,6 @@
-Mis seguidores
+<h1>My Followers</h1>
+<% current_user.followers.each do |follower| %>
+  <%= follower.name %><br/>
+  @<%= follower.username %><br/>
+  <%= render partial: "tweets/follow_button", locals: {user: follower} %>
+<% end %>

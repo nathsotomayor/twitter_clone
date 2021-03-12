@@ -1,28 +1,34 @@
 
-    <nav id="sidebarMenu" class="col d-md-block sidebar collapse">
-        <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-            <li class="nav-item">
-            <a class="nav-link active" href="#">
-                <i class="fab fa-twitter fa-2x bird" ></i>
-            </a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link active" href="#">
-                Home
-            </a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">
-                <%= current_user.name %>
-                @<%= current_user.username %>
-            </a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="#">
-                <%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-info btn-lg' %>
-            </a>
-            </li>
-        </ul>
-        </div>
-    </nav>
+<nav id="sidebarMenu" class="col d-md-block sidebar collapse">
+    <div class="sidebar-sticky">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+        <a class="nav-link active" href="#">
+            <i class="fab fa-twitter fa-2x bird" ></i>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link">
+            <%= link_to "Home", root_path %>
+        </a>
+        </li>
+        <li class="nav-item pb-4">
+        <a class="nav-link">
+            <%= link_to "Profile", user_path(current_user.id) %><br/>
+            <%= current_user.name %>
+            @<%= current_user.username %>
+        </a>
+        </li>
+        <li class="nav-item pb-4">
+        <a>
+            <%= link_to 'Tweet', new_tweet_path, class: 'btn btn-info btn-lg' %>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a>
+            <%= button_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-outline-info btn-lg nav-link' %>
+        </a>
+        </li>
+    </ul>
+    </div>
+</nav>
