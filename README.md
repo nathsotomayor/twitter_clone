@@ -1,6 +1,4 @@
-# README
-
-Installation, Init and Usage
+# Installation, Init and Usage
 
 Make sure that you have installed rails 6+ before cloning:
 
@@ -11,4 +9,4 @@ Make sure that you have installed rails 6+ before cloning:
 5. Run the migrations `rails db:migrate`
 6. Run the server: `rails s -b 0.0.0.0 -p 3000`
 
-Get into the URL 127.0.0.1:3000 to start the web app, create a new account.
+Get into the URL `127.0.0.1:3000` to start the web app, create a new account.
