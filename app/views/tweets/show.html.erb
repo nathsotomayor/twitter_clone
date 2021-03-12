@@ -1,6 +1,2 @@
-<%= @tweet.tweet %>
-
+<%= @tweet.tweet %><br/><br/>
 <%= link_to 'Back', tweets_path %>
-<%= link_to tweet, method: :delete, data: { confirm: "Are you sure you want to delete this tweeet?" } do %>
-  <span class="icon">Delete</span>
-<% end %>
