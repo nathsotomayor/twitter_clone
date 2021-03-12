@@ -4,13 +4,14 @@
       <%= render partial: "shared/navbar_lateral" %>
     </div>
     <div class="col-7">
+      <%= render partial: "profile" %>
       <%= render partial: "feed" %><br/>
       <div class="pagination justify-content-center">
         <%= will_paginate @tweets %>
       </div>
     </div>
     <div class="col-3">
-      Who to follow
+      <%= render partial: "who_to_follow" %>
     </div>
   </div>
 </div>
