@@ -9,8 +9,7 @@
           <div class="card-body pe-1 ps-1 pb-1 pt-1">
             <strong class="card-title"><%= user.name %></strong>
             <small class="card-subtitle text-muted">
-              @<%= user.username %><br/>
-              <%= link_to "Link to Profile", user_path(user.id) %>
+              <%= link_to  "@" + user.username, user_path(user.id) %>
               <%= render "follow_button", user: user %>
             </small>
           </div>

@@ -1,16 +1,14 @@
 <div class="card">
   <div class="card-body">
-    <% @tweets.each do |tweet| %>
+    <% tweets.each do |tweet| %>
       <div class="card">
         <div class="card-body">
-          <% if current_user.id == tweet.user_id %>
             <p class="card-text">
               <strong><%= tweet.user.name %></strong>, 
               <small>@<%= tweet.user.username %></small> ·
               <small><%= tweet.created_at.getlocal.strftime("%d %b. %Y %I:%M %P") %></small><br/>
               <p><%= tweet.tweet %></p>
             </p>
-          <% end %>
           <% if user_signed_in? && current_user.id == tweet.user_id %>
             <nav class="level">
               <div class="level-left is-mobile">
