@@ -1,6 +1,7 @@
-<h1>Followed</h1>
-<% current_user.following.each do |followee| %>
-  <%= followee.name %><br/>
-  @<%= followee.username %><br/>
+<h1>Following</h1>
+<% @user.following.each do |followee| %>
+  <%= followee.name %> 
+  (<%= link_to  "@" + followee.username, user_path(followee.id) %>)<br/>
   <%= render partial: "tweets/follow_button", locals: {user: followee} %>
 <% end %>
+<%= link_to 'Home', tweets_path %>

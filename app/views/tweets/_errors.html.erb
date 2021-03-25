@@ -1,0 +1,9 @@
+<% if @tweet.errors.any? %>
+  <div class="alert alert-danger" id="error_explanation">
+    <ul>
+      <% @tweet.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

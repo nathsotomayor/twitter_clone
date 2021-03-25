@@ -15,6 +15,8 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: "Must be a valid email address" }
 
+  default_scope -> { order(name: :ASC) }
+
   def follow(other)
     active_relationships.create(followed_id: other.id)
   end

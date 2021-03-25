@@ -37,6 +37,8 @@ gem 'ffi', '~> 1.12.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
+# Agnostic pagination in plain ruby. Read more: https://github.com/ddnexus/pagy
+gem 'pagy', '~> 4.1'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
