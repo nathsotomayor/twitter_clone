@@ -9,6 +9,14 @@
     <small class="card-text text-muted"><%= @user.following.count %> Following</small>
     <%= link_to 'Following', following_user_path(@user.id), class: "btn btn-outline-info btn-sm" %>
     <small class="card-text text-muted"><%= @user.followers.count %> Followers</small>
-    <%= link_to 'Followers', followers_user_path(@user.id), class: "btn btn-outline-info btn-sm" %>
+    <%= link_to 'Followers', followers_user_path(@user.id), class: "btn btn-outline-info btn-sm" %><br/>
+    <% if current_user.following?(@user) == false && current_user != @user %>
+      <%= form_for(current_user.active_relationships.build) do |f| %>
+        <div>
+          <%= hidden_field_tag :followed_id, @user.id %>
+        </div>
+        <%= f.submit "Follow", class: "btn btn-primary btn-sm" %>
+      <% end %>
+    <% end %>
   </div>
 </div>

@@ -1,15 +1,15 @@
 <div class="card">
   <div class="card-header">
-    Who to follow
+    Who I'm following
   </div>
   <ul class="list-group list-group-flush">
-    <% @users.each do |user| %>
+    <% @user.following.each do |user| %>
       <% if current_user.id != user.id %>
         <li class="list-group-item">
           <div class="card-body pe-1 ps-1 pb-1 pt-1">
             <strong class="card-title"><%= user.name %></strong>
             <small class="card-subtitle text-muted">
-              <%= link_to  "@" + user.username, user_path(user.id) %>
+              (<%= link_to  "@" + user.username, user_path(user.id) %>)
               <%= render "follow_button", user: user %>
             </small>
           </div>
