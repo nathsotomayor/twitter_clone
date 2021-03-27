@@ -1,16 +1,27 @@
 class UsersController < ApplicationController
+  include UserScoped
 
   def show
-    @user = User.find(params[:id])
     @tweets = @user.tweets.paginate(page: params[:page], per_page: 10)
   end
 
-  def following
-    @user = User.find(params[:id])
-  end
+  # def follow_username
+  #   @user = User.find_by(username: params[:user])
+  #   if @user
+  #     if current_user.following?(@user)
+  #       flas[:alert] = "You already follow #{@user.username}"
+  #     else
 
-  def followers
-    @user = User.find(params[:id])
-  end
+  #     end
+  #   end
+  # end
+
+  # def following
+  #   @user = User.find(params[:id])
+  # end
+
+  # def followers
+  #   @user = User.find(params[:id])
+  # end
 
 end

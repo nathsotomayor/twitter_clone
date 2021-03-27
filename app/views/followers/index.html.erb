@@ -1,7 +1,8 @@
 <h1>Followers</h1>
 <% @user.followers.each do |follower| %>
   <%= follower.name %> 
-  (<%= link_to  "@" + follower.username, user_path(follower.id) %>)<br/>
+  (<%= link_to  "@" + follower.username, user_path(follower.username) %>)<br/>
   <%= render partial: "tweets/follow_button", locals: {user: follower} %>
 <% end %>
+<%= will_paginate @users %>
 <%= link_to 'Home', tweets_path %>
