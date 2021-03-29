@@ -11,8 +11,8 @@ Rails.application.routes.draw do
     resources :followers, only: [:index]
   end
 
-  get 'search_user', to: 'users#search_user'
-  post 'search_user', to: 'users#search_user'
+  get 'looking_for', to: 'users#looking_for'
+  post 'looking_for', to: 'users#looking_for'
 
   resources :relationships
 

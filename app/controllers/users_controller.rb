@@ -5,33 +5,22 @@ class UsersController < ApplicationController
     @tweets = @user.tweets.paginate(page: params[:page], per_page: 10)
   end
 
-  def search_user
+  def looking_for
     if params[:followed].present?
-      @to_follow = User.find_by(username: params[:followed])
-      if @to_follow != current_user
-        if current_user.following.include?(@to_follow)
+      @look_for = User.find_by(username: params[:followed])
+      if @look_for != current_user
+        if current_user.following.include?(@look_for)
           redirect_to tweets_path, alert: "User already followed."
-        elsif !@to_follow
+        elsif !@look_for
           redirect_to tweets_path, alert: "Username does not exists."
         else
-          follow = Relationship.create(follower: current_user, followed: @to_follow)
-          redirect_to user_path(@to_follow.username), notice: "Now, your are following #{@to_follow.username}"
+          follow = Relationship.create(follower: current_user, followed: @look_for)
+          redirect_to user_path(@look_for.username), notice: "Your are now following #{@look_for.username}"
         end
       else
-        redirect_to tweets_path, alert: "Invalid operation."
+        redirect_to tweets_path, alert: "Invalid operation. You can't follow yourself."
       end
     end
   end
-
-  # def follow_username
-  #   @user = User.find_by(username: params[:user])
-  #   if @user
-  #     if current_user.following?(@user)
-  #       flas[:alert] = "You already follow #{@user.username}"
-  #     else
-
-  #     end
-  #   end
-  # end
 
 end
