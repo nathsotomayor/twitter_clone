@@ -14,11 +14,21 @@ This is a web application developed with Ruby on Rails that contains some simila
 * Feed view only with your tweets and tweets from people you follow.
 * Profile view only with your tweets.
 * Custom url with you username that redirect to your profile.
+* View with a list of your followers.
+* View with a list of users you follow.
+* Log out.
 
 
 ## Screenshots
 
+Home page (feed):
+
 ![Screen Shot 2021-05-20 at 10 04 24 PM](https://user-images.githubusercontent.com/28455356/119075999-69327400-b9b7-11eb-9a08-3cee29e0ad19.png)
+
+
+Profile view:
+
+![Screen Shot 2021-05-20 at 10 14 09 PM](https://user-images.githubusercontent.com/28455356/119076757-c1b64100-b9b8-11eb-9988-59e6bc22a07b.png)
 
 
 ## Requeriments
