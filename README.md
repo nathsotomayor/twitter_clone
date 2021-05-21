@@ -19,18 +19,6 @@ This is a web application developed with Ruby on Rails that contains some simila
 * Log out.
 
 
-## Screenshots
-
-Home page (feed):
-
-![Screen Shot 2021-05-20 at 10 04 24 PM](https://user-images.githubusercontent.com/28455356/119075999-69327400-b9b7-11eb-9a08-3cee29e0ad19.png)
-
-
-Profile view:
-
-![Screen Shot 2021-05-20 at 10 14 09 PM](https://user-images.githubusercontent.com/28455356/119076757-c1b64100-b9b8-11eb-9988-59e6bc22a07b.png)
-
-
 ## Requeriments
 
 * Ruby 2.7+
@@ -50,3 +38,15 @@ Make sure that you have installed rails 6+ before cloning:
 7. Run the server: `rails s -b 0.0.0.0 -p 3000`
 
 Get into the URL `127.0.0.1:3000` or app live demo [link](twitter-clone-nathsotomayor.herokuapp.com/) to start the web app.
+
+
+## Screenshots
+
+Home page (feed):
+
+![Screen Shot 2021-05-20 at 10 04 24 PM](https://user-images.githubusercontent.com/28455356/119075999-69327400-b9b7-11eb-9a08-3cee29e0ad19.png)
+
+
+Profile view:
+
+![Screen Shot 2021-05-20 at 10 14 09 PM](https://user-images.githubusercontent.com/28455356/119076757-c1b64100-b9b8-11eb-9988-59e6bc22a07b.png)
