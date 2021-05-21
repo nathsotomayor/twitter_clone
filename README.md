@@ -9,7 +9,7 @@ This is a web application developed with Ruby on Rails that contains some simila
 * Log in into your account.
 * Tweet from your account only if you are logged in.
 * Follow and unfollow another users.
-* Search another users to follow them.
+* Search another users to follow them (you should know if the user is already registered and the username).
 * Another users can follow and unfollow you.
 * Feed view only with your tweets and tweets from people you follow.
 * Profile view only with your tweets.
