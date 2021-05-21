@@ -16,6 +16,11 @@ This is a web application developed with Ruby on Rails that contains some simila
 * Custom url with you username that redirect to your profile.
 
 
+## Screenshots
+
+![Screen Shot 2021-05-20 at 10 04 24 PM](https://user-images.githubusercontent.com/28455356/119075999-69327400-b9b7-11eb-9a08-3cee29e0ad19.png)
+
+
 ## Requeriments
 
 * Ruby 2.7+
